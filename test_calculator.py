@@ -27,6 +27,12 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(self.calc.divide(4,2), 2)
 
+    def test_divide_2(self):
+        self.assertEqual(self.calc.divide(0, 2), 0)
+
+    def test_divide_3(self):
+        self.assertEqual(self.calc.divide(4,0), -1)
+
     # Add the following test methods to the TestCalculator class:
 
 if __name__ == '__main__':
