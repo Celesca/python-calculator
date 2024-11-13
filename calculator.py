@@ -7,7 +7,7 @@ class Calculator:
 
     def multiply(self, a, b):
         result = 0
-        for i in range(b+1):
+        for i in range(b):
             result = self.add(result, a)
         return result
 
