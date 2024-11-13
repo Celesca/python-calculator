@@ -14,7 +14,7 @@ class Calculator:
     def divide(self, a, b):
         result = 0
         if b == 0:
-            return -1
+            raise Exception("Sorry, no numbers below zero")
         while a >= b:
             a = self.subtract(a, b)
             result += 1
