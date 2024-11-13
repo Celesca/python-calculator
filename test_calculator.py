@@ -21,6 +21,12 @@ class TestCalculator(unittest.TestCase):
     def test_multiply(self):
         self.assertEqual(self.calc.multiply(2, 1), 2)
 
+    def test_multiply_2(self):
+        self.assertEqual(self.calc.multiply(0, 11), 0)
+
+    def test_divide(self):
+        self.assertEqual(self.calc.divide(4,2), 2)
+
     # Add the following test methods to the TestCalculator class:
 
 if __name__ == '__main__':
