@@ -13,7 +13,7 @@ class Calculator:
 
     def divide(self, a, b):
         result = 0
-        while a > b:
+        while a >= b:
             a = self.subtract(a, b)
             result += 1
         return result
