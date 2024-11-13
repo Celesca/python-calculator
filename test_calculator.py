@@ -33,6 +33,12 @@ class TestCalculator(unittest.TestCase):
     def test_divide_3(self):
         self.assertEqual(self.calc.divide(4,0), -1)
 
+    def test_modulo(self):
+        self.assertEqual(self.calc.modulo(4,2), 0)
+
+    def test_modulo_2(self):
+        self.assertEqual(self.calc.modulo(5,2), 1)
+
     # Add the following test methods to the TestCalculator class:
 
 if __name__ == '__main__':

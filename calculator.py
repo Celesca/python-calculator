@@ -21,7 +21,7 @@ class Calculator:
         return result
     
     def modulo(self, a, b):
-        while a <= b:
+        while a >= b:
             a = a-b
         return a
 
