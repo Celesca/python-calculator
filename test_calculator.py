@@ -12,6 +12,9 @@ class TestCalculator(unittest.TestCase):
     def test_add_2(self):
         self.assertEqual(self.calc.add(0, 1), 1)
 
+    def test_add_3(self):
+        self.assertEqual(self.calc.add("a", 1), "Please enter only integer")
+
     def test_subtract(self):
         self.assertEqual(self.calc.subtract(2, 1), 1)
 
@@ -20,6 +23,9 @@ class TestCalculator(unittest.TestCase):
 
     def test_subtract_3(self):
         self.assertEqual(self.calc.subtract(1, 4), -3)
+
+    def test_subtract_4(self):
+        self.assertEqual(self.calc.subtract("A", 2), "Please enter only integer")
 
     def test_multiply(self):
         self.assertEqual(self.calc.multiply(2, 1), 2)
@@ -50,6 +56,15 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide_3(self):
         self.assertEqual(self.calc.divide(4,0), "Divided by zero")
+
+    def test_divide_4(self):
+        self.assertEqual(self.calc.divide(5,2), 2)
+
+    def test_divide_5(self):
+        self.assertEqual(self.calc.divide(5,"a"), "Please enter only integer")
+
+    def test_divide_6(self):
+        self.assertEqual(self.calc.divide(-2, 2), -1)
 
     def test_modulo(self):
         self.assertEqual(self.calc.modulo(4,2), 0)

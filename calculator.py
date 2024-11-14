@@ -23,12 +23,21 @@ class Calculator:
     def divide(self, a, b):
         if type(a) != int or type(b) != int:
             return "Please enter only integer"
-        result = 0
         if b == 0:
             return "Divided by zero"
+        
+        # ตัวแปรสำหรับเช็คว่าผลลัพธ์ควรเป็น ลบไหม
+        negative = (a < 0) != (b < 0)  
+        a, b = abs(a), abs(b)
+        
+        result = 0
         while a >= b:
             a = self.subtract(a, b)
             result += 1
+        
+        if negative:
+            result = -result
+        
         return result
     
     def modulo(self, a, b):
