@@ -1,11 +1,18 @@
 class Calculator:
+    
     def add(self, a, b):
+        if type(a) != int or type(b) != int:
+            return "Please enter only integer"
         return a + b
 
     def subtract(self, a, b):
+        if type(a) != int or type(b) != int:
+            return "Please enter only integer"
         return a - b
 
     def multiply(self, a, b):
+        if type(a) != int or type(b) != int:
+            return "Please enter only integer"
         result = 0
         for i in range(abs(b)):
             result = self.add(result, a)
@@ -14,6 +21,8 @@ class Calculator:
         return result
 
     def divide(self, a, b):
+        if type(a) != int or type(b) != int:
+            return "Please enter only integer"
         result = 0
         if b == 0:
             return "Divided by zero"

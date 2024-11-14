@@ -39,6 +39,9 @@ class TestCalculator(unittest.TestCase):
     def test_multiply_6(self):
         self.assertEqual(self.calc.multiply(1,-3), -3)
 
+    def test_multiply_7(self):
+        self.assertEqual(self.calc.multiply("Hello", 3), "Please enter only integer")
+
     def test_divide(self):
         self.assertEqual(self.calc.divide(4,2), 2)
 
